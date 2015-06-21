@@ -1,5 +1,4 @@
-library(data.table)
-setwd("C:\\Users\\alw64gf\\Documents\\R\\Getting and Cleaning Data\\Week 3\\Project\\data")
+setwd(".\\data") # set working directory to the main folder with the files features.txt, readme.txt and so on... 
 
 #***Tasks: # You should create one R script called run_analysis.R that does the following.
 # 1. Merges the training and the test sets to create one data set.
@@ -88,10 +87,10 @@ library(reshape2)
 
 #I use the combination from subject_number and activity_number as row ID
 melt_dataset <- melt(filtered_data, id=c("subject_number","activity_number"))
-final_dataset<-reshape2::acast(melt_dataset,subject_number+activity_number~...,mean)
+final_dataset<-reshape2::dcast(melt_dataset,subject_number+activity_number~...,mean)
 
 #write the result to a file
-write.table(final_dataset, "test.txt")
+write.table(final_dataset, "result.txt", row.names = FALSE)
 
 
 
