@@ -3,7 +3,7 @@ For the course getting and cleaning data
 
 Explanation of run_analysis.R
 
-*Steps
+----Steps
 
 1. 
 The code reads all files from the "working directory" and the underlying folders
