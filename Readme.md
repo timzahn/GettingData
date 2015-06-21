@@ -1,8 +1,12 @@
+# GettingData
+For the course getting and cleaning data
+
 Explanation of run_analysis.R
 
-*Steps
+----Steps
 
-1. 
+
+1.
 The code reads all files from the "working directory" and the underlying folders
 "test" and "train" and renames them properly, based on the given information in the provided files.
 
